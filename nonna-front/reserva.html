@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--Abriu uma tag, tem que fechar-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantina da Nonna</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="public/style/index.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Cantina da Nonna.</a>
+        <div class="links-nav">
+
+            <a href="index.html">Início</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="reserva.html">Reserva</a>
+            <a href="cadastro-produtos.html">Cadastro de Produtos.</a>
+        </div>
+    </nav>
+    <h1>Reserva de mesa</h1>
+    <p>Preencha os dados abaixo para simular uma reserva na Cantina da Nonna. </p>
+
+    <form>
+        <fieldset>
+            <p>
+                <label for="nome">nome completo:</label>
+                <br>
+                <input type="text" id="nome" name="nome" placeholder="Fulano da silva" required minlength="3">
+            </p>
+            <p>
+                <label for="email">E-mail:</label>
+                <br>
+                <input type="email" id="email" name="email" placeholder="fulano@email.com">
+            </p>
+            <p>
+                <label for="telefone">Telefone:</label>
+                <br>
+                <input type="tel" id="telefone" name="telefone" placeholder="(48) 9 9999-7777" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados da Reserva</legend>
+            <p>
+                <label for="data">Data da Reserva</label><br>
+                <input type="date" id="data" name="data" required>
+            </p>
+            <p>
+                <label for="horario">Horário:</label><br>
+                <input type="time" id="horario" name="horario" required>
+            </p>
+            <p>
+                <label for="pessoas">Quantidade de Pessoas:</label><br>
+                <input type="number" id="pessoas" name="pessoas" placeholder="Ex.: 4" required min="1" max="20">
+            </p>
+            <p>Área desejada</p>
+            <input type="radio" id="area-interna" name="area" value="interna" required>
+            <label for="area-interna">Área-interna</label><br>
+            <input type="radio" id="area-externa" name="area" value="externa" required>
+            <label for="area-externa">Área-externa</label><br>
+            <input type="radio" id="area-indiferente" name="area" value="indiferente" required>
+            <label for="indiferente">Área-indiferente</label>
+            <hr>
+            <p>preferências</p>
+            <input type="checkbox" id="cadeirao" name="preferencias" value="cadeirao">
+            <label for="caldeirao">Preciso de Cadeirão infantil</label><br>
+            <input type="checkbox" id="aniversario" name="preferencias" value="aniversario">
+            <label for="aniversario">É uma comemoração de aniversário</label><br>
+            <input type="checkbox" id="acessibilidade" name="preferencias" value="acessibilidade">
+            <label for="acessibilidade">Precisso de acessibilidade</label><br>
+            <p>
+                <label for="observacoes">Observações:</label><br>
+                <textarea id="observacoes" name="observacoes" rows="4" cols="40"
+                    placeholder="Ex.: Mesa perto da janela"></textarea>
+            </p>
+        </fieldset>
+        <p>
+            <input type="checkbox" id="confirmacao" name="confirmacao" required>
+            <label for="confirmacao">Confirmo que os dados da resenva estão corretos.</label>
+
+        </p>
+        <button type="submit">Enviar reserva!</button>
+        <button type="reset">Limpar formulário!</button>
+    </form>
+
+    <footer>
+        <h2>Localização</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55867.362209277315!2d-49.46138748344729!3d-28.93665450585806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95222e8c2ac5216f%3A0x513fbcca9ea3d6d2!2sHospital%20Regional%20Deputado%20Afonso%20Guizzo%20(HRA)!5e0!3m2!1spt-BR!2sbr!4v1784248127243!5m2!1spt-BR!2sbr"
+            width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <p>&copy; 2026 Cantina da Nonna.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
